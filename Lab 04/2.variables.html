@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Variables in JavaScript</title>
+    <!--Referencing external JavaScript-->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <p>There are few ways to use variables such as</p>
+    <ul>
+        <li>using var keyword</li>
+        <li>using let keyword</li>
+        <li>using const keyword</li>
+    </ul>
+    
+      <script>
+          // 1. The redeclaration issue code
+          // By using variable we can redeclare the variable 
+          var a = 2;
+          var a = 3;
+          document.write("The var variable value is: " + a);
+          document.write("<br><br>");
+          // By using let we cannot redeclare the variable by using let keyword again
+          let b = 2;
+          b = 3;
+          document.write("The let variable value is: " + b);
+          document.write("<br><br>");
+          // let b = 4; // this is error as we cannot redeclare a variable using let
+          
+          // By using constant we cannot assign new value again
+          const c = 3;
+          
+          document.write("The const variable value is: " + c);
+          // following is error as constant cannot be re-assigned. 
+          /*
+          c = 6;
+          console.log(c);
+          */
+          document.write("<br><br>");
+          
+          // 2. The initialization issue
+          var z;
+          document.write("The value of the non-initialize var variable is: " + z);
+          document.write("<br>");
+          
+          let y;
+          document.write("The value of the non-initialize let variable is: " + y);
+          document.write("<br>");
+          
+          /* Error as constant should be initialize after declaring
+          const x;
+          console.log(x);
+          document.write("<br>");
+          */
+          
+          // 3. The block scope issue, var keyword can access outside the scope unlike the let keyword
+          var h = 2;
+          if(h == 2){
+              var k = 3;
+          }
+          document.write("The value of variable var k is: " + k);
+          document.write("<br><br>");
+          
+          var hh = 2;
+          if(hh == 2){
+              let kk = 3;   
+          }
+          // the following line has no output due to scope issue, console.log test case check
+          document.write("The value of  let variable var kk is: " + kk); 
+          document.write("<br><br>");
+          
+          var hhh = 2;
+          if(hhh == 2){
+              const kkk = 3;
+          }
+          // The following line has no output due to scope issue, console.log test case check
+          document.write("Constant variable var kkk is: " + kkk); 
+          document.write("<br><br>");         
+        
+    </script>    
+</body>
+</html>

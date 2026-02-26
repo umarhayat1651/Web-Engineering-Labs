@@ -1,0 +1,1 @@
+document.write("I am the javascript in external file.")

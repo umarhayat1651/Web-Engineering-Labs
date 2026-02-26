@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Arrays in JavaScript</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <script>
+        // Step 1: Traditional FOR loop for execution
+        /* let array_integer = [1,2,3,4,5];
+        for(let i = 0; i < array_integer.length; i++){
+            document.write("Array elements are: " + array_integer[i]);
+            document.write("<br  />");
+        } */
+
+        // Step 2: foreach loop for the array 
+        // foreach loop all the array data without need for the start and end point and stored all data in parameter
+        // here parameter is value. for indexing; can add as function(value,index)
+        /*
+        let array_integer = [1,2,3,4,5];
+        array_integer.forEach(function(value){
+            document.write("Array elements are: " + value);
+            document.write("<br />");
+        });
+        */
+        // Step 3: foreach loop call function and stored data
+        /*
+        let array_integer = [1,2,3,4,5];
+        array_integer.forEach(arrayFunction);
+
+        function arrayFunction(value){
+            document.write("Array elements are: " + value);
+            document.write("<br />");
+        }
+        */
+       
+        // 1st step: individual array elements initialization 
+        var array_one = [];
+        array_one[0] = "first";
+        array_one[1] = "second";
+       
+        document.write("First array element is: " + array_one[0] + "<br>");
+        document.write("Second array element is: " + array_one[1] + "<br>");
+        document.write("Elements of array are: " + array_one + "<br>");
+        
+        // 2nd step: array declaration in one line
+        var array_two = ["one","two","three"];
+        document.write("Elements of array are: " + array_two + "<br>");
+        
+        // 3rd step: array looping through foreach
+        var array_three = ["one","two","three"];
+        array_three.forEach(function(value,key){
+           document.write(value + " " + key);
+           document.write("<br>");
+        });
+        
+        // 4th step: array passing to the function through forEach
+        var array_four = ["four","five","six"];
+        array_four.forEach(testing);    // passed to the testing function
+        
+        function testing(value,key){        // testing function definition
+            document.write(value + " " + key);
+           document.write("<br>");
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <script>
+        var person = {
+            firstName: "waheed",
+            lastName: "xyz",
+            age: 20
+        };
+
+        document.write("<table border='1'>");
+        document.write("<tr><th>Key</th><th>Value</th></tr>");
+
+        for (var key in person) {
+            document.write("<tr>");
+            
+            // Printing the key (e.g., firstName)
+            document.write("<td>" + key + "</td>"); 
+            
+            // Printing the value inside an input text box
+            document.write("<td><input type='text' value='" + person[key] + "'></td>"); 
+            
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+

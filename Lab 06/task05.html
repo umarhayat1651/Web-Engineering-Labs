@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+
+<body>
+    <script>
+        function fetchUserData(callback) {
+            setTimeout(() => {
+                const user = { name: "Umar", age: 22 };
+                callback(user);
+            }, 10000);
+        }
+
+        fetchUserData((user) => {
+            document.write(`Name: ${user.name}, Age: ${user.age}`);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <script>
+        // Hoisting with var
+        console.log(a); // undefined
+        var a = 10;
+
+
+        // Hoisting with let
+        console.log(b); // ReferenceError
+        let b = 20;
+
+
+        // Hoisting with const
+        console.log(c); // ReferenceError
+        const c = 30;
+    </script>
+</body>
+
+</html>
